@@ -1,0 +1,465 @@
+/*
+Theme Name: Summer BootCamp
+Description: A demo theme for summer camps built on Twitter Bootstrap.
+Author: Leslie Bass
+Author URI: http://lesliebass.com/
+Version: 1.0
+Tags: responsive, bootstrap
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html 
+
+Colors:
+Light Yellow #fdb763
+Dark Yellow #faa540
+Mid Green #136e37
+Light Brown #9f5d38
+Mid Brown #472d1f
+Dark Brown #351e13
+Grey #c9cdc9
+*/
+
+@import url('bootstrap/css/bootstrap.css'); 
+@import url('bootstrap/css/bootstrap-responsive.css'); 
+
+@font-face {
+    font-family: 'YanoneKaffeesatzLight';
+    src: url('fonts/YanoneKaffeesatz-Light-webfont.eot');
+    src: url('fonts/YanoneKaffeesatz-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/YanoneKaffeesatz-Light-webfont.woff') format('woff'),
+         url('fonts/YanoneKaffeesatz-Light-webfont.ttf') format('truetype'),
+         url('fonts/YanoneKaffeesatz-Light-webfont.svg#YanoneKaffeesatzLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YanoneKaffeesatzRegular';
+    src: url('fonts/YanoneKaffeesatz-Regular-webfont.eot');
+    src: url('fonts/YanoneKaffeesatz-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/YanoneKaffeesatz-Regular-webfont.woff') format('woff'),
+         url('fonts/YanoneKaffeesatz-Regular-webfont.ttf') format('truetype'),
+         url('fonts/YanoneKaffeesatz-Regular-webfont.svg#YanoneKaffeesatzRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DejaVuSerifBook';
+    src: url('fonts/DejaVuSerif-webfont.eot');
+    src: url('fonts/DejaVuSerif-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/DejaVuSerif-webfont.woff') format('woff'),
+         url('fonts/DejaVuSerif-webfont.ttf') format('truetype'),
+         url('fonts/DejaVuSerif-webfont.svg#DejaVuSerifBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Global styles---------------------------------------------------------------------------------*/
+
+html {
+	font-size: 100%;
+}
+
+body {
+	padding: 0 0 40px 0;
+}
+
+h2 {
+	color: #136e37;
+	font-family: 'YanoneKaffeesatzRegular';
+	text-shadow: 0px 0.0009px #136e37;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+h3 {
+	color: #fff;
+	font-family: 'YanoneKaffeesatzLight';
+	font-size: 1.25rem;
+	line-height: 1.8rem;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+p,
+li {
+	color: #351e13;
+	font-family: 'DejaVuSerifBook';
+	font-size: 1rem;
+	line-height: 1.4rem;
+}
+
+a {
+	color: #fdb763;
+	-moz-transition: color 250ms ease-in-out;
+    -webkit-transition: color 250ms ease-in-out;
+    -o-transition: color 250ms ease-in-out;
+    transition: color 250ms ease-in-out;
+}
+
+a:hover {
+	color: #fdb763;
+	text-decoration: none;
+}
+
+.btn-large {
+	padding: 14px 18px;
+}
+
+.btn {
+	background-color: #faa540;
+	background-image: none;
+	color: #351e13;
+	font-family: 'YanoneKaffeesatzRegular';
+	font-size: 1.1rem;
+}
+
+.btn-primary,
+.btn-primary:active {
+	background-color: #faa540;
+	background-image: none;
+	color: #351e13;
+	font-family: 'YanoneKaffeesatzRegular';
+	font-size: 2rem;
+}
+
+.btn:hover,
+.btn-primary:hover {
+	background-color: #fdb763;
+	color: #351e13;
+}
+
+/* Overwrite BootStrap styles for button hover transitions */
+.btn:hover {
+	-moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.row {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+/* Header styles-----------------------------------------------------------------------------*/
+
+.brand img {
+	max-height: 60px;
+	-moz-transition: all 250ms ease-in;
+    -webkit-transition: all 250ms ease-in;
+    -o-transition: all 250ms ease-in;
+    transition: all 250ms ease-in;
+}
+
+.brand img:hover {
+	opacity: 0.75;
+}
+
+/* Overwrite BootStrap styles for navigation */
+.navbar-inverse .navbar-inner {
+	background-image: url('images/wood2.jpg');
+}
+
+.navbar-inverse .nav > li > a {
+	color: #9f5d38;
+	-moz-transition: color 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+}
+
+.navbar-inverse .nav > li > a:hover {
+	color: #fdb763;
+}
+
+.navbar-inner {
+	border: none;
+}
+
+.navbar .brand {
+	padding: 0;
+}
+
+.navbar .nav {
+	padding-top: 5px;
+}
+
+.navbar-fixed-top {
+	top: 0;
+}
+
+.navbar-fixed-top .container {
+	width: 95%;
+}
+
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus,
+.navbar-inverse .nav .current_page_item a,
+.navbar-inverse .nav .current_page_item a:hover,
+.navbar-inverse .nav .current_page_item a:focus,
+.navbar-inverse .nav .current_page_parent a,
+.navbar-inverse .nav .current_page_parent a:hover,
+.navbar-inverse .nav .current_page_parent a:focus {
+	color: #9f5d38;
+	background-color: inherit;
+}
+
+.nav li {
+	font-family: 'YanoneKaffeesatzRegular';
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+/* Front page callout content styles */
+.hero-unit-container {
+	width: 100%;
+}
+
+.hero-unit {
+	background: url('images/greene2.jpg') no-repeat top center fixed;
+	border-radius: 0;
+	margin: 60px 0 0 0;
+	min-height: 450px;
+	padding: 140px 60px 60px 60px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.hero-unit h1 {
+	color: #fff;
+	font-family: 'YanoneKaffeesatzRegular';
+	font-size: 5.1rem;
+	padding-bottom: 10px;
+	text-shadow: 4px 3px #472d1f;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.hero-unit p {
+	color: #fff;
+	font-family: 'YanoneKaffeesatzLight';
+	font-size: 2.2rem;
+	line-height: 2.5rem;
+	max-width: 780px;
+	text-shadow: 1px 1px #472d1f;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.welcomewrap {
+	background-color: #136e37;
+	padding: 10px 10px 10px 40px;
+	text-align: left;
+}
+
+/* Section (page) styles------------------------------------------------------------------------*/
+
+.our-programs .sectionwrap {
+	background: url('images/coleman.jpg') no-repeat top left fixed;
+	max-height: 580px;
+	padding: 50px 40px 40px 40px;
+}
+
+.our-programs .pagecallout {
+	clear: both;
+	background: #136e37;
+	margin: 90px 0 15px 0;
+	opacity: 0.8;
+	padding: 15px;
+}
+
+.our-programs h2 {
+	color: #fff;
+	font-size: 2.8rem;
+	opacity: 1;
+	text-align: center;
+	text-shadow: 2px 2px #472d1f;
+}
+
+.our-programs p {
+	color: #c9cdc9;
+	font-family: 'YanoneKaffeesatzLight';
+	font-size: 2.2rem;
+	line-height: 2.5rem;
+	text-shadow: 1px 1px #472d1f;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.our-programs ul {
+	margin: 30px 0 0 0;
+	padding: 0;
+	width: 60%;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	-ms-column-count: 2;
+	column-count: 2;
+	-moz-column-gap: 40px;
+	-webkit-column-gap: 40px;
+	-ms-column-gap: 40px;
+	column-gap:40px;
+}
+
+.our-programs li {
+	color: #c9cdc9;
+	font-family: 'YanoneKaffeesatzLight';
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	margin: 0;
+	text-shadow: 1px 1px #472d1f;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+
+/* Responsive styles-----------------------------------------------------------------------------*/
+
+@media (max-width: 979px) {
+	html {
+		font-size: 90%;
+	}
+	
+	body {
+		padding-top: 0;
+	}
+	
+	.hero-unit {
+		margin-top: 0;
+		padding: 180px 60px 60px 60px;
+	}
+	
+	.navbar-fixed-top {
+		margin-bottom: 0;
+	}
+	
+	.navbar-inverse .btn-navbar {
+		background-color: #faa540;
+		background-image: none;
+		margin-top: 15px;
+		-moz-transition: background-color 0.25s ease-in-out;
+    	-webkit-transition: background-color 0.25s ease-in-out;
+    	-o-transition: background-color 0.25s ease-in-out;
+    	transition: background-color 0.25s ease-in-out;
+	}
+	
+	.navbar-inverse .btn-navbar:hover {
+		background-color: #fdb763;
+	}
+	
+	.navbar-fixed-top .navbar-inner {
+		padding: 0;
+	}
+	
+	.our-programs .pagecallout {
+		margin: 10px 0 15px 0;
+		width: 80%;
+	}
+	
+	.our-programs p {
+		width: 80%;
+	}
+	
+	.our-programs ul {
+		width: 70%;
+	}
+	
+}
+
+@media (max-width: 767px) {
+	body {
+		padding: 0;
+	}
+	
+	.navbar-fixed-top {
+		margin-right: 0;
+		margin-left: 0;
+	}
+	
+	.hero-unit {
+		padding: 90px 60px 60px 30px;
+	}
+	
+	.hero-unit h1 {
+		line-height: 4.5rem;
+	}
+		
+	.welcomewrap {
+		padding: 10px 10px 10px 20px;
+	}
+	
+	.row {
+		margin: 0 15px 0 20px;
+	}
+	
+	.span4 {
+		padding-bottom: 20px;
+	}
+	
+	.our-programs .sectionwrap {
+		padding: 20px;
+	}
+	
+	.our-programs .pagecallout {
+		margin: 20px 0 15px 0;
+		width: 95%;
+	}
+	
+	.our-programs p {
+		width: 95%;
+	}
+	
+	.our-programs ul {
+		width: 100%;
+	}
+	
+	footer {
+		margin-left: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	html {
+		font-size: 85%; 
+	}
+	
+	.hero-unit {
+		background: url('images/greene.jpg') no-repeat top center;
+		min-height: 300px;
+		padding: 20px 30px 30px 30px;
+	}
+	
+	.hero-unit h1 {
+		padding-top: 10px;
+	}
+	
+	.hero-unit p {
+		font-family: 'YanoneKaffeesatzRegular';
+	}
+	
+	.our-programs .sectionwrap {
+		background: url('images/coleman.jpg') no-repeat top left;
+		padding: 20px;
+	}
+	
+	.our-programs .pagecallout {
+		margin: 25px 0 15px 0;
+		width: 90%;
+	}
+	
+	.our-programs p {
+		font-size: 1.8rem;
+	}
+	
+	.our-programs li {
+		font-size: 1rem;
+		line-height: 1.8rem;
+	}
+}
