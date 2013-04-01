@@ -1,4 +1,6 @@
-SUMMER BOOTCAMP
+Summer BootCamp
+=============
+
 Twitter's Bootstrap (http://twitter.github.com/bootstrap) in WordPress theme form, designed for use by summer camps. Throughout development, a sample site using the theme can be viewed at http://development.lesliebass.com.
 
 AUTHOR
