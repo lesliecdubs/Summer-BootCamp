@@ -9,6 +9,7 @@ Summer BootCamp brings to the table:
 
 + Responsive design thanks to Bootstrap
 + Easy to set up as a one-page site
++ Animated navigation scroll
 + Theme options panel to add your camp's logo
 + Custom web fonts & imagery
 
@@ -17,5 +18,4 @@ What to expect
 In future iterations, I plan to add:
 
 + Theme options to upload your photos as page backgrounds
-+ Built-in jQuery scroll to animate one-page navigation without requiring a WordPress plugin
 + Contact template with Google maps integration
