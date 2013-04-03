@@ -65,6 +65,11 @@ body {
 	padding: 0 0 40px 0;
 }
 
+/* Set font weight again for Firefox */
+h1, h2, h3, h4, h5 {
+   font-weight: 400;
+}
+
 h2 {
 	color: #136e37;
 	font-family: 'YanoneKaffeesatzRegular';
@@ -160,7 +165,7 @@ a:hover {
 
 /* Overwrite BootStrap styles for navigation */
 .navbar-inverse .navbar-inner {
-	background-image: url('images/wood2.jpg');
+	background-image: url('images/wood.jpg');
 }
 
 .navbar-inverse .nav > li > a {
@@ -222,9 +227,9 @@ a:hover {
 }
 
 .hero-unit {
-	background: url('images/greene2.jpg') no-repeat top center fixed;
+	background: url('images/greene.jpg') no-repeat top center fixed;
 	border-radius: 0;
-	margin: 60px 0 0 0;
+	margin: 59px 0 0 0;
 	min-height: 450px;
 	padding: 140px 60px 60px 60px;
 	-webkit-background-size: cover;
@@ -262,13 +267,17 @@ a:hover {
 
 /* Section (page) styles------------------------------------------------------------------------*/
 
-.our-programs .sectionwrap {
+#home {
+	padding-top: 1px;
+}
+
+#our-programs .sectionwrap {
 	background: url('images/coleman.jpg') no-repeat top left fixed;
 	max-height: 580px;
 	padding: 50px 40px 40px 40px;
 }
 
-.our-programs .pagecallout {
+#our-programs .pagecallout {
 	clear: both;
 	background: #136e37;
 	margin: 90px 0 15px 0;
@@ -276,7 +285,7 @@ a:hover {
 	padding: 15px;
 }
 
-.our-programs h2 {
+#our-programs h2 {
 	color: #fff;
 	font-size: 2.8rem;
 	opacity: 1;
@@ -284,17 +293,17 @@ a:hover {
 	text-shadow: 2px 2px #472d1f;
 }
 
-.our-programs p {
+#our-programs p {
 	color: #c9cdc9;
 	font-family: 'YanoneKaffeesatzLight';
-	font-size: 2.2rem;
+	font-size: 2.1rem;
 	line-height: 2.5rem;
 	text-shadow: 1px 1px #472d1f;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
 
-.our-programs ul {
+#our-programs ul {
 	margin: 30px 0 0 0;
 	padding: 0;
 	width: 60%;
@@ -308,11 +317,12 @@ a:hover {
 	column-gap:40px;
 }
 
-.our-programs li {
+#our-programs li {
 	color: #c9cdc9;
 	font-family: 'YanoneKaffeesatzLight';
 	font-size: 1.4rem;
 	line-height: 2.2rem;
+	list-style-type: none;
 	margin: 0;
 	text-shadow: 1px 1px #472d1f;
 	-webkit-font-smoothing: antialiased;
@@ -358,16 +368,16 @@ a:hover {
 		padding: 0;
 	}
 	
-	.our-programs .pagecallout {
+	#our-programs .pagecallout {
 		margin: 10px 0 15px 0;
 		width: 80%;
 	}
 	
-	.our-programs p {
+	#our-programs p {
 		width: 80%;
 	}
 	
-	.our-programs ul {
+	#our-programs ul {
 		width: 70%;
 	}
 	
@@ -403,20 +413,20 @@ a:hover {
 		padding-bottom: 20px;
 	}
 	
-	.our-programs .sectionwrap {
+	#our-programs .sectionwrap {
 		padding: 20px;
 	}
 	
-	.our-programs .pagecallout {
+	#our-programs .pagecallout {
 		margin: 20px 0 15px 0;
 		width: 95%;
 	}
 	
-	.our-programs p {
+	#our-programs p {
 		width: 95%;
 	}
 	
-	.our-programs ul {
+	#our-programs ul {
 		width: 100%;
 	}
 	
@@ -444,21 +454,21 @@ a:hover {
 		font-family: 'YanoneKaffeesatzRegular';
 	}
 	
-	.our-programs .sectionwrap {
+	#our-programs .sectionwrap {
 		background: url('images/coleman.jpg') no-repeat top left;
 		padding: 20px;
 	}
 	
-	.our-programs .pagecallout {
+	#our-programs .pagecallout {
 		margin: 25px 0 15px 0;
 		width: 90%;
 	}
 	
-	.our-programs p {
+	#our-programs p {
 		font-size: 1.8rem;
 	}
 	
-	.our-programs li {
+	#our-programs li {
 		font-size: 1rem;
 		line-height: 1.8rem;
 	}

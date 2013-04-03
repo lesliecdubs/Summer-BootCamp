@@ -1,4 +1,6 @@
 <?php
+// Full Disclosure: The following code was written with the assistance of a WPTuts tutorial, http://wp.tutsplus.com/tutorials/creative-coding/how-to-integrate-the-wordpress-media-uploader-in-theme-and-plugin-options
+
 function wptuts_get_default_options() {
 	$options = array(
 		'logo' => ''
@@ -10,22 +12,22 @@ function wptuts_get_default_options() {
 function wptuts_options_init() {
      $wptuts_options = get_option( 'theme_wptuts_options' );
 	 
-	 // Are our options saved in the DB?
+	 // Check to see if options are in database
      if ( false === $wptuts_options ) {
-		  // If not, we'll save our default options
+		  // If not, save default options
           $wptuts_options = wptuts_get_default_options();
 		  add_option( 'theme_wptuts_options', $wptuts_options );
      }
 	 
-     // In other case we don't need to update the DB
+     // Otherwise don't update the database
 }
-// Initialize Theme options
+// Initialize theme options
 add_action( 'after_setup_theme', 'wptuts_options_init' );
 
 function wptuts_options_setup() {
 	global $pagenow;
 	if ('media-upload.php' == $pagenow || 'async-upload.php' == $pagenow) {
-		// Now we'll replace the 'Insert into Post Button inside Thickbox' 
+		// Replace the 'Insert into Post Button inside Thickbox' with custom text 
 		add_filter( 'gettext', 'replace_thickbox_text' , 1, 2 );
 	}
 }
@@ -42,7 +44,7 @@ function replace_thickbox_text($translated_text, $text ) {
 	return $translated_text;
 }
 
-// Add "WPTuts Options" link to the "Appearance" menu
+// Add "Theme Options" link to the "Appearance" menu
 function wptuts_menu_options() {
 	//add_theme_page( $page_title, $menu_title, $capability, $menu_slug, $function);
      add_theme_page('Theme Options', 'Theme Options', 'edit_theme_options', 'wptuts-settings', 'wptuts_admin_options_page');
@@ -55,15 +57,13 @@ function wptuts_admin_options_page() {
 		<!-- 'wrap','submit','icon32','button-primary' and 'button-secondary' are classes 
 		for a good WP Admin Panel viewing and are predefined by WP CSS -->
 		
-		
-		
 		<div class="wrap">
 			
 			<div id="icon-themes" class="icon32"><br /></div>
 		
 			<h2><?php _e( 'WPTuts Options', 'wptuts' ); ?></h2>
 			
-			<!-- If we have any error by submiting the form, they will appear here -->
+			<!-- If there is any error submiting the form, it will appear here -->
 			<?php settings_errors( 'wptuts-settings-errors' ); ?>
 			
 			<form id="form-wptuts-options" action="options.php" method="post" enctype="multipart/form-data">
@@ -115,11 +115,11 @@ function wptuts_options_validate( $input ) {
 function delete_image( $image_url ) {
 	global $wpdb;
 	
-	// We need to get the image's meta ID..
+	// Get the image's meta ID
 	$query = "SELECT ID FROM wp_posts where guid = '" . esc_url($image_url) . "' AND post_type = 'attachment'";  
 	$results = $wpdb -> get_results($query);
 
-	// And delete them (if more than one attachment is in the Library
+	// And delete them (if more than one attachment is in the library)
 	foreach ( $results as $row ) {
 		wp_delete_attachment( $row -> ID );
 	}	
@@ -150,10 +150,10 @@ function wptuts_options_settings_init() {
 	// Add a form section for the Logo
 	add_settings_section('wptuts_settings_header', __( 'Logo Options', 'wptuts' ), 'wptuts_settings_header_text', 'wptuts');
 	
-	// Add Logo uploader
+	// Add logo uploader
 	add_settings_field('wptuts_setting_logo',  __( 'Logo', 'wptuts' ), 'wptuts_setting_logo', 'wptuts', 'wptuts_settings_header');
 	
-	// Add Current Image Preview 
+	// Add current image preview 
 	add_settings_field('wptuts_setting_logo_preview',  __( 'Logo Preview', 'wptuts' ), 'wptuts_setting_logo_preview', 'wptuts', 'wptuts_settings_header');
 }
 add_action( 'admin_init', 'wptuts_options_settings_init' );

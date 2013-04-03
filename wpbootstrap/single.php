@@ -3,6 +3,7 @@
 <div class="row">
   <div class="span8">
 
+	<!-- If posts, loop through and display title, time and full content -->
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<h1><?php the_title(); ?></h1>
 		<p><em><?php the_time('l, F jS, Y'); ?></em></p>
@@ -10,8 +11,10 @@
 	  	<?php the_content(); ?>
 
 	  	<hr>
+	  	<!-- Display comments -->
 		<?php comments_template(); ?>
 
+	<!-- If no posts, display message -->
 	<?php endwhile; else: ?>
 		<p><?php _e('Sorry, this page does not exist.'); ?></p>
 	<?php endif; ?>

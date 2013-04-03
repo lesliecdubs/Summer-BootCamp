@@ -4,7 +4,10 @@
 <div id="container">
 <a name="top"></a>
 
+<!-- Full Disclosure: The following code was written with assistance from a tutorial that no longer exists on the web. -->
+
 <?php
+// Array to store each page's info
 $args = array(
 	'sort_order' => 'ASC',
 	'sort_column' => 'menu_order', //post_title
@@ -25,12 +28,12 @@ foreach ($pages as $page_data) {
     $title = $page_data->post_title;
     $slug = $page_data->post_name;
 ?>
-<div class='<?php echo "$slug" ?>'><a name='<?php echo "$slug" ?>'></a>
-<div class="sectionwrap">
+<div id='<?php echo "$slug" ?>'>
+	<a name='<?php echo "$slug" ?>'></a>
+		<div class="sectionwrap">
 			<?php echo "$content" ?>
+		</div>
 </div>
-</div>
-
 
 <?php 
 }
