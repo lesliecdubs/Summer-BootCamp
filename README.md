@@ -23,4 +23,5 @@ In future iterations, I plan to add:
 Sources
 -------------
 Many thanks to Treehouse for their tutorial on building a WordPress theme from Bootstrap, http://blog.teamtreehouse.com/responsive-wordpress-bootstrap-theme-tutorial.
+
 Thanks also to WPTuts for their tutorial on integrating the WordPress media uploader in the theme options panel, http://wp.tutsplus.com/tutorials/creative-coding/how-to-integrate-the-wordpress-media-uploader-in-theme-and-plugin-options/ & Treehouse for thei
